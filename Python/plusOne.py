@@ -32,23 +32,13 @@ Constraints:
 digits does not contain any leading 0's.
 """
 
-"""TO COMPLETE"""
 
 def plusOne(digits: list[int]) -> list[int]:
-    nine = 0
+    digitsString = ""
     for digit in digits:
-        if digit == 9:
-            nine +=1
+        digitsString += str(digit)
+    digitsString = int(digitsString) + 1
+    return [int(digit) for digit in str(digitsString)]
 
-    
-    if nine == len(digits):
-        newList = [1,]
-        for i in range(len(digits)):
-            newList.append(0)
-        return newList
 
-    digits[-1] = digits[-1] + 1
-
-    return digits
-
-print(plusOne([9,9,9]))
+print(plusOne([9, 8, 9]))
